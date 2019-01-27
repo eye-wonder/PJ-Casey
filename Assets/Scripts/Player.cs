@@ -43,6 +43,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
         if (this.transform.position.y < bottomOfLevel)
         {
             print("Respawn!");
