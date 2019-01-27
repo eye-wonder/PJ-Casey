@@ -8,6 +8,8 @@ public class PlayerCheckpoint : MonoBehaviour
     [SerializeField]
     private Image screenImage;
 
+    private ThrowPillow throwPillow;
+
     private void Awake()
     {
         if(screenImage == null)
@@ -15,6 +17,7 @@ public class PlayerCheckpoint : MonoBehaviour
             // Find the first Image from Canvas
             screenImage = FindObjectOfType<Image>();
         }
+        throwPillow = GetComponent<ThrowPillow>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -38,6 +41,7 @@ public class PlayerCheckpoint : MonoBehaviour
     private IEnumerator ShowEndScreen()
     {
         screenImage.enabled = true;
+        throwPillow.ImmediatePillowRecall();
         yield return new WaitForSeconds(3f);
         screenImage.enabled = false;
     }
