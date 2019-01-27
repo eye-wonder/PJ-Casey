@@ -565,7 +565,7 @@ GameObject:
   - component: {fileID: 481451737}
   - component: {fileID: 481451736}
   - component: {fileID: 481451739}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: doggie
   m_TagString: Untagged
   m_Icon: {fileID: 0}

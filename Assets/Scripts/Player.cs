@@ -91,6 +91,25 @@ public class Player : MonoBehaviour
             {
                 animator.SetBool("isjumping", true);
                 rb.AddForce(Vector2.up * 250 * jumpHeight);
+
+
+                if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+                {
+                    movingRight = false;
+                    rb.AddForce(Vector2.left * 10 * movementSpeed);
+
+                    spriteRenderer.flipX = false;
+ 
+                }
+                else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+                {
+                    movingRight = true;
+                    rb.AddForce(Vector2.right * 10 * movementSpeed);
+
+                    spriteRenderer.flipX = true;
+                }
+
+
             }
             else if(cg.IsGrounded)
             {
