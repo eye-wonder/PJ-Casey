@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ThrowPillow : MonoBehaviour
 {
+ 
     [SerializeField]
     private KeyCode _recallKey = KeyCode.F;
 
@@ -20,8 +21,8 @@ public class ThrowPillow : MonoBehaviour
     private bool _facingRight; // This needs to be hooked up to the player later
     private bool _pillowExists;
 
-    [SerializeField]
-    private bool _pillowComingBack;
+    
+    public bool pillowComingBack;
 
     [Header("Arc")]
     [SerializeField]
@@ -33,6 +34,7 @@ public class ThrowPillow : MonoBehaviour
 
     private Transform pillow;
 
+    private Animator animator;
 
     private void Awake()
     {
@@ -44,6 +46,7 @@ public class ThrowPillow : MonoBehaviour
         if (!arcRenderer) { this.GetComponentInChildren<LaunchArcRenderer>(); }
         _facingRight = this.GetComponent<Player>().movingRight;
         arcRenderer.RenderArc(new Vector2(0f, 0f), 10, 0, 0);
+        animator = this.GetComponent<Animator>();
     }
 
     private void Update()
@@ -59,7 +62,10 @@ public class ThrowPillow : MonoBehaviour
         //Render Arc preview
         if (Input.GetMouseButton(0))
         {
+            animator.SetBool("iswalking", false);
+            animator.SetBool("isThrowing", true);
             this.GetComponent<Player>().canMove = false;
+
 
             //make the line green if you can throw, red otherwise
             if (_pillowExists)
@@ -95,6 +101,8 @@ public class ThrowPillow : MonoBehaviour
         //Throw pillow
         if (Input.GetMouseButtonUp(0))
         {
+            animator.SetBool("isThrowing", false);
+            animator.SetBool("hasPillow", false);
             this.GetComponent<Player>().canMove = true;
 
             if ((_facingRight && _forceApplied.x >= 0) && !_pillowExists) // Facing Right
@@ -126,25 +134,41 @@ public class ThrowPillow : MonoBehaviour
 
     public void ReturnPillowOnKeyPress()
     {
-        if(Input.GetKeyDown(_recallKey) && !_pillowComingBack && _pillowExists)
+        if(Input.GetKeyDown(_recallKey) && !pillowComingBack && _pillowExists)
         {
-            _pillowComingBack = true;
+            pillowComingBack = true;
             pillow.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            animator.SetBool("isThrowing", false);
         }
 
-        if (_pillowComingBack)
+        if (pillowComingBack)
         {
+            Debug.Log("unbounce");
+            pillow.gameObject.GetComponent<Bouncy>().IsBouncy = false;
             //if the pillow has returned to you, destroy it
             if (Vector3.Distance(this.gameObject.transform.position, pillow.transform.position) < 1.0f)
             {
                 Destroy(pillow.gameObject);
                 _pillowExists = false;
-                _pillowComingBack = false;
+                pillowComingBack = false;
+                animator.SetBool("hasPillow", true);
+
             }
             else //move it towards you
             {
                 pillow.position = Vector3.MoveTowards(pillow.position, this.transform.position, 0.3f);
             }
+        }
+    }
+
+    public void ImmediatePillowRecall()
+    {
+        if(pillow != null)
+        {
+            Destroy(pillow.gameObject);
+            _pillowExists = false;
+            pillowComingBack = false;
+            animator.SetBool("hasPillow", true);
         }
     }
 
