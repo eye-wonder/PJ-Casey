@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ThrowPillow : MonoBehaviour
 {
+ 
     [SerializeField]
     private KeyCode _recallKey = KeyCode.F;
 
@@ -142,6 +143,8 @@ public class ThrowPillow : MonoBehaviour
 
         if (_pillowComingBack)
         {
+            Debug.Log("unbounce");
+            pillow.gameObject.GetComponent<Bouncy>().IsBouncy = false;
             //if the pillow has returned to you, destroy it
             if (Vector3.Distance(this.gameObject.transform.position, pillow.transform.position) < 1.0f)
             {

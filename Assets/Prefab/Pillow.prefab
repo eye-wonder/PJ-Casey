@@ -82,7 +82,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.1603303}
+  m_Offset: {x: -0.053443074, y: 0.06675339}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -93,7 +93,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 10.731433}
+  m_Size: {x: 2.0380251, y: 2.3345718}
   m_EdgeRadius: 0
 --- !u!212 &4975396169398849780
 SpriteRenderer:
@@ -129,8 +129,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -414230435
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 981052515ea602e4a9e40f5e084632ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -228,6 +228,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8258417610821041213}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d8292484fd20d344952605f2d2bffae, type: 3}
+  m_Script: {fileID: 11500000, guid: 86a9b001b02d18d4cb41e9760de961ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Force: 1000
+  positions:
+  - {fileID: 8095306027570319809}
+  maxDistance: 0.01
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 512
