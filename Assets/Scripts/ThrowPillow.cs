@@ -161,6 +161,17 @@ public class ThrowPillow : MonoBehaviour
         }
     }
 
+    public void ImmediatePillowRecall()
+    {
+        if(pillow != null)
+        {
+            Destroy(pillow.gameObject);
+            _pillowExists = false;
+            pillowComingBack = false;
+            animator.SetBool("hasPillow", true);
+        }
+    }
+
     public void OnTriggerStay2D(Collider2D other)
     {
         if (Input.GetKeyDown(_recallKey) && other.tag == "Pillow")
