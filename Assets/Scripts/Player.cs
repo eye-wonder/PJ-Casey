@@ -26,13 +26,18 @@ public class Player : MonoBehaviour
     [Tooltip("Percent of throwStrength to throw in X and Y distances. EX 1,0.9 = uses 100% of throwStrength.x and 90% of throwStrength.y")]
     public Vector2 throwVectorXY;
 
-
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
+    private CharacterGrounding cg;
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = this.GetComponent<Animator>();
+        spriteRenderer = this.GetComponent<SpriteRenderer>();
         rb = this.GetComponent<Rigidbody2D>();
+        cg = this.GetComponent<CharacterGrounding>();
     }
 
     // Update is called once per frame
@@ -63,17 +68,33 @@ public class Player : MonoBehaviour
                 {
                     movingRight = false;
                     rb.AddForce(Vector2.left * 10 * movementSpeed);
+
+                    spriteRenderer.flipX = false;
+                    animator.SetBool("iswalking", true);
                 }
                 else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
                 {
                     movingRight = true;
                     rb.AddForce(Vector2.right * 10 * movementSpeed);
+
+                    animator.SetBool("iswalking", true);
+                    spriteRenderer.flipX = true;
+                }
+                else
+                {
+                    animator.SetBool("iswalking", false);
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.Space) && this.GetComponent<Rigidbody2D>().velocity.y <= 0.01f)
+
+            if (Input.GetKeyDown(KeyCode.Space) &&  cg.IsGrounded)
             {
+                animator.SetBool("isjumping", true);
                 rb.AddForce(Vector2.up * 250 * jumpHeight);
+            }
+            else if(cg.IsGrounded)
+            {
+                animator.SetBool("isjumping", false);
             }
         }
     }

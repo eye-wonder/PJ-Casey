@@ -15,7 +15,7 @@ public class Lava : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        t+= 0.2f;
+        t+= 0.1f;
         this.transform.position = new Vector3(Mathf.Sin(t), startPosition.y + Mathf.Sin(t), 0.0f);        
     }
 }
