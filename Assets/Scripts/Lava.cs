@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Lava : MonoBehaviour
 {
+    private float t;
+    private Vector3 startPosition;
     // Start is called before the first frame update
     void Start()
     {
-        
+        startPosition = this.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        this.transform.position = new Vector3(Mathf.PingPong(Time.time, 2) + this.transform.position.x, Mathf.PingPong(Time.time, 8) + this.transform.position.y, 0.0f);        
+        t+= 0.1f;
+        this.transform.position = new Vector3(Mathf.Sin(t), startPosition.y + Mathf.Sin(t), 0.0f);        
     }
 }
