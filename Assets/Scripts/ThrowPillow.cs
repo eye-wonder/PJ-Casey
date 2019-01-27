@@ -21,8 +21,8 @@ public class ThrowPillow : MonoBehaviour
     private bool _facingRight; // This needs to be hooked up to the player later
     private bool _pillowExists;
 
-    [SerializeField]
-    private bool _pillowComingBack;
+    
+    public bool pillowComingBack;
 
     [Header("Arc")]
     [SerializeField]
@@ -134,14 +134,14 @@ public class ThrowPillow : MonoBehaviour
 
     public void ReturnPillowOnKeyPress()
     {
-        if(Input.GetKeyDown(_recallKey) && !_pillowComingBack && _pillowExists)
+        if(Input.GetKeyDown(_recallKey) && !pillowComingBack && _pillowExists)
         {
-            _pillowComingBack = true;
+            pillowComingBack = true;
             pillow.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             animator.SetBool("isThrowing", false);
         }
 
-        if (_pillowComingBack)
+        if (pillowComingBack)
         {
             Debug.Log("unbounce");
             pillow.gameObject.GetComponent<Bouncy>().IsBouncy = false;
@@ -150,7 +150,7 @@ public class ThrowPillow : MonoBehaviour
             {
                 Destroy(pillow.gameObject);
                 _pillowExists = false;
-                _pillowComingBack = false;
+                pillowComingBack = false;
                 animator.SetBool("hasPillow", true);
 
             }

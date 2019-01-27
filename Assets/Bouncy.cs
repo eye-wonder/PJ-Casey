@@ -33,6 +33,8 @@ public class Bouncy : MonoBehaviour
                 break;
         }
 
+        
+
         StickToMovingObjects();
     }
 
@@ -42,7 +44,7 @@ public class Bouncy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (IsBouncy)
+            if (IsBouncy && !other.GetComponent<ThrowPillow>().pillowComingBack)
             {
                 Debug.Log("Enter");
                 //other.GetComponent<Player>().jumpHeight *= 2;
