@@ -231,10 +231,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86a9b001b02d18d4cb41e9760de961ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Force: 1000
+  Force: 10
   positions:
   - {fileID: 8095306027570319809}
   maxDistance: 0.01
   layerMask:
     serializedVersion: 2
     m_Bits: 512
+  IsBouncy: 0

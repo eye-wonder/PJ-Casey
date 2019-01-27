@@ -189,6 +189,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 4.81
       objectReference: {fileID: 0}
+    - target: {fileID: 8085246861036300996, guid: baec94559aa482a4dabc0a8d5fb36efa,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8085246861860702525, guid: baec94559aa482a4dabc0a8d5fb36efa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baec94559aa482a4dabc0a8d5fb36efa, type: 3}
 --- !u!1001 &227107107
@@ -202,6 +212,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bookshelf empty nonSolid
+      objectReference: {fileID: 0}
+    - target: {fileID: 4696893658439138325, guid: 1e0d57f89d382464f974c2a59ee70805,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1833231570625367086, guid: 1e0d57f89d382464f974c2a59ee70805,
         type: 3}
@@ -282,6 +297,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bookshelf empty nonSolid (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4696893658439138325, guid: 1e0d57f89d382464f974c2a59ee70805,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1833231570625367086, guid: 1e0d57f89d382464f974c2a59ee70805,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -350,6 +370,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: table solid
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299374383554264023, guid: 618b43b8269cfd349a1d977ec82d6300,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6525739028237299252, guid: 618b43b8269cfd349a1d977ec82d6300,
         type: 3}
@@ -429,6 +454,7 @@ GameObject:
   - component: {fileID: 481451738}
   - component: {fileID: 481451737}
   - component: {fileID: 481451736}
+  - component: {fileID: 481451739}
   m_Layer: 0
   m_Name: doggie
   m_TagString: Untagged
@@ -520,6 +546,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &481451739
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481451735}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.49}
+  m_Size: {x: 6.82, y: 2.69}
+  m_Direction: 1
 --- !u!1001 &581003540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -531,6 +573,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bookshelf empty nonSolid (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4696893658439138325, guid: 1e0d57f89d382464f974c2a59ee70805,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1833231570625367086, guid: 1e0d57f89d382464f974c2a59ee70805,
         type: 3}
@@ -601,10 +648,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: table with computer solid
       objectReference: {fileID: 0}
+    - target: {fileID: 3299124330862811477, guid: 0acfc71a84ceeeb4ebfc0f38af719b65,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6090290253953719042, guid: 0acfc71a84ceeeb4ebfc0f38af719b65,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 47.59
+      value: 47.17
       objectReference: {fileID: 0}
     - target: {fileID: 6090290253953719042, guid: 0acfc71a84ceeeb4ebfc0f38af719b65,
         type: 3}
@@ -805,6 +857,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: couch Simple nonSolid
+      objectReference: {fileID: 0}
+    - target: {fileID: 201527711041577441, guid: d46a96a2aae1f684db261031e147316f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 364730738820381975, guid: d46a96a2aae1f684db261031e147316f,
         type: 3}
@@ -1241,7 +1298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   positions:
   - {fileID: 835315235}
-  maxDistance: 0.01
+  maxDistance: 0.03
   layerMask:
     serializedVersion: 2
     m_Bits: 512
@@ -1479,8 +1536,8 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -414230435
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
@@ -1644,7 +1701,7 @@ GameObject:
   - component: {fileID: 1647571665}
   - component: {fileID: 1647571664}
   - component: {fileID: 1647571663}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: gym-ball-png-download-gym-ball-png-images-transparent-gallery-advertisement-495
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1744,12 +1801,12 @@ PrefabInstance:
     - target: {fileID: 7392793338625862350, guid: ab727e8ef1042ce48a19ad1e5d07f884,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 119.7
+      value: 119.28
       objectReference: {fileID: 0}
     - target: {fileID: 7392793338625862350, guid: ab727e8ef1042ce48a19ad1e5d07f884,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 32.4
+      value: 32.24
       objectReference: {fileID: 0}
     - target: {fileID: 7392793338625862350, guid: ab727e8ef1042ce48a19ad1e5d07f884,
         type: 3}
@@ -1809,6 +1866,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bookshelf empty solid
+      objectReference: {fileID: 0}
+    - target: {fileID: 4696893658439138325, guid: c78b7906aff3987479dcc62644b1d302,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1833231570625367086, guid: c78b7906aff3987479dcc62644b1d302,
         type: 3}
@@ -1888,6 +1950,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: table solid (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299374383554264023, guid: 618b43b8269cfd349a1d977ec82d6300,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6525739028237299252, guid: 618b43b8269cfd349a1d977ec82d6300,
         type: 3}
