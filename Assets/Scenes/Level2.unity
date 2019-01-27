@@ -4883,7 +4883,7 @@ Transform:
   m_LocalScale: {x: 0.42029, y: 0.42029, z: 0.42029}
   m_Children: []
   m_Father: {fileID: 232601968}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.521}
 --- !u!114 &1300344545
 MonoBehaviour:
@@ -7492,8 +7492,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 40, y: 40}
+  m_DrawMode: 2
+  m_Size: {x: 600, y: 41.36}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

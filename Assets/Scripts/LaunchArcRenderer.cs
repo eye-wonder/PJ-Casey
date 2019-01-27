@@ -72,6 +72,7 @@ public class LaunchArcRenderer : MonoBehaviour
         float y = yStartPosition + ((x * Mathf.Tan(radianAngle)) - ((gravity * x * x) / (2 * Velocity * Velocity * Mathf.Cos(radianAngle) * Mathf.Cos(radianAngle))));
         x += xStartPosition;
 
-        return new Vector3(x, y);
+        return new Vector3(x, y, -1f);
+
     }
 }
