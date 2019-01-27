@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4993292508947126864}
   - component: {fileID: 4975396169398849780}
   - component: {fileID: 1448695399270236376}
+  - component: {fileID: 1468734825402002074}
   m_Layer: 9
   m_Name: Pillow
   m_TagString: Pillow
@@ -81,7 +82,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.1603303}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -92,7 +93,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 3, y: 10.731433}
   m_EdgeRadius: 0
 --- !u!212 &4975396169398849780
 SpriteRenderer:
@@ -218,3 +219,15 @@ PolygonCollider2D:
       - {x: 0.715, y: -0.905}
       - {x: 0.85499996, y: -0.745}
       - {x: 0.955, y: -0.555}
+--- !u!114 &1468734825402002074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8258417610821041213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d8292484fd20d344952605f2d2bffae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
