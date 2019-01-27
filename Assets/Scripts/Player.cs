@@ -91,7 +91,7 @@ public class Player : MonoBehaviour
             {
                 animator.SetBool("isjumping", true);
                 rb.AddForce(Vector2.up * 250 * jumpHeight);
-
+                
 
                 if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
                 {

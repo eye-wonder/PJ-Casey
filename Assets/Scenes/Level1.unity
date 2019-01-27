@@ -860,11 +860,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: bookshelf empty nonSolid (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4696893658439138325, guid: 1e0d57f89d382464f974c2a59ee70805,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 1833231570625367086, guid: 1e0d57f89d382464f974c2a59ee70805,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1583,6 +1578,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183021146485026001, guid: 1e0d57f89d382464f974c2a59ee70805,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -407452207
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183021146485026001, guid: 1e0d57f89d382464f974c2a59ee70805,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e0d57f89d382464f974c2a59ee70805, type: 3}
@@ -3141,7 +3146,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 1
-  m_RendererPriority: 0
+  m_RendererPriority: 10
   m_Materials:
   - {fileID: 0}
   m_StaticBatchInfo:
@@ -3160,9 +3165,9 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -414230435
-  m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingLayerID: -407452207
+  m_SortingLayer: 2
+  m_SortingOrder: 10
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
@@ -3715,13 +3720,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1135841107
   m_SortingLayer: 1
-  m_SortingOrder: -100
+  m_SortingOrder: -1000
   m_Sprite: {fileID: 21300000, guid: 3f1a22c02c573434ca65b9a087c61830, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 40, y: 40}
+  m_DrawMode: 2
+  m_Size: {x: 730.2, y: 40}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
